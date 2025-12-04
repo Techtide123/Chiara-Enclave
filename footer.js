@@ -28,14 +28,16 @@ document.write(
                     </div>
                 </div>
             </div>
-            <div class="subfooter">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            Copyright 2025 - CHIARA ENCLAVE by AKSHYA KUMAR DASH
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="row">
+      <div class="col-md-12 text-center">
+        <p>
+          &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved By Snow View Hotel ||
+          Developed by
+          <a href="https://tripstar.co.in" target="_blank">
+            <img src="images/trip-logo.png" alt="Trip Star Logo" style="height: 60px; vertical-align: middle; margin-left: 5px;" />
+          </a>
+        </p>
+      </div>
+    </div>
         </footer>`
 );
