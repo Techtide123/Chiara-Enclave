@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twice Happy Eco Resorts - Booking Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="icon" type="image/png" href="goura-img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content="Twice Happy Eco Resorts - Hotel and Resort HTML Template">
+    <meta name="keywords" content="hotel, resort, Spa">
+    <meta name="robots" content="index, follow">
+    <!-- for open graph social media -->
+    <meta property="og:title" content="Hotel and Resort">
+    <meta property="og:description" content="Twice Happy Eco Resorts - Hotel and Resort HTML Template">
+    <!-- for twitter sharing -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hotel and Resort">
+    <meta name="twitter:description" content="Twice Happy Eco Resorts - Hotel and Resort HTML Template">
+    <!-- favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <!-- title -->
+    <title>Twice Happy Eco Resorts - Contact Us</title>
+
+    <!-- google fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- icon font from flaticon (corrected path) -->
+    <link rel="stylesheet" href="assets/fonts/flaticon_bokinn.css">
+    <!-- all plugin css -->
+    <link rel="stylesheet" href="assets/css/plugins.min.css">
+    <!-- main style custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        /* Header/Footer local tweaks to match booking page and avoid collisions */
+        .header__top {
+            background: #1b1205;
+            color: #fff;
+        }
+
+        .header__top .link__item {
+            color: #f2e5c9;
+        }
+
+        .main__header.header__function {
+            background: #fff;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .navigation__menu .navigation__menu--item__link {
+            color: #1b1205;
+        }
+
+        .navigation__menu .submenu.sub__style {
+            background: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .rts__footer.footer__background {
+            background: #1b1205;
+            color: #f6efe3;
+        }
+
+        .rts__footer .widget__title {
+            color: #e9d7b2;
+        }
+
+        .rts__footer a[aria-label="footer__link"],
+        .rts__footer a[aria-label="footer__contact"],
+        .rts__footer .link__item {
+            color: #f2e5c9;
+        }
+
+        .copyright__text {
+            background: #151007;
+            color: #e9d7b2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background: radial-gradient(1200px 600px at 10% 10%, #f8f6f2, #efe7da) fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .booking-container {
+            display: flex;
+            max-width: 1000px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            flex-wrap: wrap;
+            position: relative;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(182, 152, 90, 0.25);
+            backdrop-filter: blur(6px);
+            margin: 40px auto;
+        }
+
+        /* Left Panel */
+        .left {
+            background: linear-gradient(160deg, #b6985a, #e9d7b2);
+            color: #1b1205;
+            flex: 1;
+            padding: 48px 36px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 18px;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .left h1 {
+            font-size: 34px;
+            margin-bottom: 6px;
+            letter-spacing: 0.3px;
+        }
+
+        .left p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #1b1205;
+        }
+
+        .left p strong {
+            color: #000;
+        }
+
+        /* Right Panel (Form) */
+        .right {
+            flex: 1.25;
+            padding: 40px 36px;
+            min-width: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+            gap: 10px;
+        }
+
+        .right h1 {
+            font-size: 26px;
+            color: #2a2a2a;
+            margin-bottom: 0px;
+        }
+
+        .right h2 {
+            font-size: 16px;
+            color: #6b6b6b;
+            margin-bottom: 22px;
+            font-weight: 500;
+        }
+
+        /* Form Styles */
+        .booking-form {
+            width: 100%;
+            text-align: left;
+        }
+
+        /* New grid layout */
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .form-grid .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group {
+            margin-bottom: 0;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2b2b2b;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #ded6c7;
+            border-radius: 10px;
+            font-size: 15px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            background: #ffffff;
+        }
+
+        .form-control:focus {
+            border-color: #b6985a;
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(182, 152, 90, 0.15);
+        }
+
+        .btn-submit {
+            background: linear-gradient(160deg, #2ecc71, #27ae60);
+            border: none;
+            padding: 13px 20px;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 12px;
+            font-weight: 700;
+            color: #fff;
+            cursor: pointer;
+            transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+        }
+
+        .btn-submit:hover {
+            filter: brightness(0.95);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(39, 174, 96, 0.25);
+        }
+
+        /* Back Home Button */
+        .back-home {
+            display: block;
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .back-home a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: #fff;
+            background: linear-gradient(160deg, #c8aa6b, #b6985a);
+            padding: 12px 28px;
+            border-radius: 999px;
+            font-weight: 700;
+            transition: all 0.25s ease;
+        }
+
+        .back-home a:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(182, 152, 90, 0.35);
+        }
+
+        /* QR Code Styling */
+        .qr-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .qr-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-height: 250px;
+            object-fit: contain;
+        }
+
+        /* UPI Section Styling */
+        .upi-section {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .upi-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        #upiId {
+            font-family: monospace;
+            font-size: 16px;
+            padding: 8px 15px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 6px;
+            word-break: break-all;
+        }
+
+        .copy-btn {
+            background: #b6985a;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .copy-btn:hover {
+            background: #a88540;
+            transform: scale(1.05);
+        }
+
+        .copy-btn i {
+            font-size: 16px;
+        }
+
+        .upi-note {
+            font-size: 14px;
+            color: #000;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        @media (max-width: 992px) {
+            .booking-container {
+                flex-direction: column;
+            }
+
+            .left,
+            .right {
+                padding: 28px 22px;
+                text-align: center;
+            }
+
+            .left h1 {
+                font-size: 28px;
+            }
+
+            .right h1 {
+                font-size: 24px;
+            }
+
+            .right h2 {
+                font-size: 18px;
+            }
+
+            .back-home a {
+                padding: 10px 20px;
+                font-size: 15px;
+            }
+
+            .qr-image {
+                max-height: 200px;
+            }
+
+            .upi-section {
+                padding: 12px;
+            }
+
+            #upiId {
+                font-size: 14px;
+                padding: 6px 10px;
+            }
+
+            .copy-btn {
+                padding: 6px 10px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+        }
+    </style>
+    <!-- moved to body for correct placement -->
+</head>
+
+<body>
+    <!-- <script src="header.js"></script> -->
+    <div class="booking-container">
+        <div class="left">
+            <h1>Welcome !</h1>
+            <h2>CHIARA ENCLAVE</h2>
+            <p><strong>Address:</strong> NH-16 Near Chiara Delight Berhampur Odisha,Pin:760003 </p>
+            <p><strong>Phone:</strong> +91 9124555095</p>
+            <p><strong>Email:</strong> chiaraenclave@gmail.com</p>
+
+            <!-- QR Code with responsive styling -->
+            <!-- <div class="qr-container">
+                <img src="sunrise-img/qr.jpeg" alt="QR Code" class="qr-image">
+            </div> -->
+
+            <!-- UPI ID Section -->
+            <!-- <div class="upi-section">
+                <p><strong>UPI ID:</strong></p>
+                <div class="upi-container">
+                    <span style="font-family: monospace; color: #000;" id="upiId">8763922836@okbizaxis</span>
+                    <button id="copyUpiBtn" class="copy-btn" title="Copy UPI ID">
+                        <i class="far fa-copy"></i>
+                    </button>
+                </div>
+                <p class="upi-note">Scan the QR code or use the UPI ID above to make payment</p>
+            </div> -->
+        </div>
+
+        <div class="right">
+            <h1>Book Your Stay</h1>
+            <h2>Fill in Your Details</h2>
+
+            <form class="booking-form" id="bookingForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="customerName">Customer Name *</label>
+                        <input type="text" class="form-control" id="customerName" placeholder="Enter your name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="extraCustomerName">Extra Customer Name</label>
+                        <input type="text" class="form-control" id="extraCustomerName"
+                            placeholder="Enter additional guest name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comingFrom">Coming From *</label>
+                        <input type="text" class="form-control" id="comingFrom" placeholder="Enter your location"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number *</label>
+                        <input type="tel" class="form-control" id="phoneNumber" placeholder="Enter your phone number"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="checkInDate">Check In Date *</label>
+                        <input type="date" class="form-control" id="checkInDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="checkOutDate">Check Out Date *</label>
+                        <input type="date" class="form-control" id="checkOutDate" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="roomType">Room Type *</label>
+                        <select class="form-control" id="roomType" required>
+                            <option value="">Select a room type</option>
+                            <option value="Luxury Deluxe Room">DELUXE ROOM</option>
+                            <option value="PREMIUM SUIT ROOM">PREMIUM SUIT ROOM</option>
+                            <!-- <option value="Standard Room">Standard Room</option> -->
+                            <!-- <option value="deluxe-room-4">Deluxe Room - 4 People</option>
+                            <option value="deluxe-room-6">Deluxe Room - 6 People</option>
+                            <option value="dormitory-room">Dormitory Room</option>
+                            <option value="standard-room-3">Standard Room - 3 People</option>
+                            <option value="standard-room-ac">Standard AC Room</option>
+                            <option value="standard-room-non-ac">Standard Non-AC Room</option> -->
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <button type="submit" class="btn-submit">Send Booking Details to WhatsApp</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="back-home">
+        <a href="index.html"><i class="fas fa-arrow-left"></i> Return to Home</a>
+    </div>
+
+    <script>
+        // Copy UPI ID to clipboard
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function () {
+                // Show success feedback
+                const copyBtn = document.getElementById('copyUpiBtn');
+                const originalHTML = copyBtn.innerHTML;
+                copyBtn.innerHTML = '<i class="fas fa-check"></i>';
+                copyBtn.style.background = '#27ae60';
+
+                // Reset button after 2 seconds
+                setTimeout(() => {
+                    copyBtn.innerHTML = originalHTML;
+                    copyBtn.style.background = '#b6985a';
+                }, 2000);
+            }).catch(function (err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+
+        // Set minimum date to today for both date inputs
+        document.addEventListener('DOMContentLoaded', function () {
+            // Add click event for copy UPI button (only if the element exists)
+            const copyUpiBtn = document.getElementById('copyUpiBtn');
+            if (copyUpiBtn) {
+                copyUpiBtn.addEventListener('click', function () {
+                    const upiEl = document.getElementById('upiId');
+                    const upiId = upiEl ? upiEl.textContent : '';
+                    if (upiId) copyToClipboard(upiId);
+                });
+            }
+
+            // Set minimum dates
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('checkInDate').setAttribute('min', today);
+            document.getElementById('checkOutDate').setAttribute('min', today);
+
+            // Add form submission handler
+            document.getElementById('bookingForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Get form values
+                const customerName = document.getElementById('customerName').value;
+                const extraCustomerName = document.getElementById('extraCustomerName').value;
+                const comingFrom = document.getElementById('comingFrom').value;
+                const phoneNumber = document.getElementById('phoneNumber').value;
+                const checkInDate = document.getElementById('checkInDate').value;
+                const checkOutDate = document.getElementById('checkOutDate').value;
+
+                // Format the message for WhatsApp
+                let message = `Hotel Booking Details:%0A%0A`;
+                message += `Customer Name: ${customerName}%0A`;
+                message += `Extra Customer Name: ${extraCustomerName || 'N/A'}%0A`;
+                message += `Coming From: ${comingFrom}%0A`;
+                message += `Phone Number: ${phoneNumber}%0A`;
+                message += `Check In Date: ${checkInDate}%0A`;
+                message += `Check Out Date: ${checkOutDate}%0A`;
+                message += `Room Type: ${document.getElementById('roomType').value}%0A`;
+
+                // Hotel's WhatsApp number
+                const whatsappNumber = '919124555095';
+
+                // Open WhatsApp with the message
+                window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
+
+                // Reset form
+                this.reset();
+
+                // Set minimum dates again after reset
+                document.getElementById('checkInDate').setAttribute('min', today);
+                document.getElementById('checkOutDate').setAttribute('min', today);
+            });
+        });
+    </script>
+    <!-- <script src="footer.js"></script> -->
+</body>
+
+</html>
