@@ -68,7 +68,7 @@ document.write(
                                                                         <div class="d-label">
                                                                             Best Seller
                                                                         </div>
-                                                                        <img src="images/form/2.jpeg"
+                                                                        <img src="images/image1/22.jpeg"
                                                                             class="w-100 relative hover-scale-1-1"
                                                                             alt="">
                                                                     </a>
@@ -86,7 +86,7 @@ document.write(
                                                                         <div class="d-label">
                                                                             Featured
                                                                         </div>
-                                                                        <img src="images/form/6.jpg"
+                                                                        <img src="images/image1/31.jpeg"
                                                                             class="w-100 relative hover-scale-1-1"
                                                                             alt="">
                                                                     </a>
